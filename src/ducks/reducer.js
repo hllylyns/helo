@@ -30,3 +30,13 @@ export function updateUser(username, id, profile_picture) {
         }
     }
 }
+
+export function getUser(){
+    let user = axios.get('/:id').then( res => {
+        return res.data;
+    })
+    return {
+        type: GET_USER,
+        payload: user
+    }
+}

@@ -28,6 +28,8 @@ app.use(session({
 
 
 app.post('/:id', controller.create);
+app.get('/:id', controller.read);
+
 
 
 
